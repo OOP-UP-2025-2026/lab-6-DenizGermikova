@@ -2,47 +2,22 @@ package ua.opnu.list;
 
 public class Student {
     private String name;
-    private String lastName;
-    private double avgMark; // Середній бал
+    private String surname;
+    private double averageMark;
 
-    public Student(String name, String lastName, double avgMark) {
+    public Student(String name, String surname, double averageMark) {
         this.name = name;
-        this.lastName = lastName;
-        this.avgMark = avgMark;
+        this.surname = surname;
+        this.averageMark = averageMark;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public double getAvgMark() {
-        return avgMark;
-    }
-
-    public void setAvgMark(double avgMark) {
-        this.avgMark = avgMark;
-    }
+    public String getName() { return name; }
+    public String getSurname() { return surname; }
+    public double getAverageMark() { return averageMark; }
 
     @Override
     public String toString() {
-        StringBuilder builder = new StringBuilder();
-        builder.append(lastName);
-        builder.append(" ");
-        builder.append(name);
-        builder.append(", середній бал: ").append(avgMark);
-
-        return builder.toString();
+        return name + " " + surname + " (" + averageMark + ")";
     }
 }
+
